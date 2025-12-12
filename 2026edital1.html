@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edital de Eleição de Oficiais - IPB Altiplano</title>
+    
+    <!-- Tailwind CSS (Estilização) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonte Google: Noto Serif (Títulos) e Inter (Texto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ipb: {
+                            blue: '#004785', // Azul oficial
+                            gold: '#C5A059', // Dourado
+                            dark: '#1a1a1a',
+                            light: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white; color: black; }
+            .shadow-lg { box-shadow: none; border: 1px solid #ddd; }
+            a { text-decoration: none; color: black; }
+        }
+    </style>
+</head>
+<body class="bg-ipb-light text-gray-800 font-sans min-h-screen flex flex-col">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-md border-b-4 border-ipb-blue sticky top-0 z-50 print:static print:border-none print:shadow-none">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <!-- Logo -->
+                <div class="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-gray-100 rounded-full overflow-hidden border-2 border-ipb-gold print:w-12 print:h-12">
+                    <img src="logo.jpg" 
+                         alt="Logo Igreja Presbiteriana de Altiplano" 
+                         class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/200x200/004785/FFFFFF?text=IPA'; this.alt='Logo Placeholder';">
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-serif font-bold text-ipb-blue uppercase tracking-wide">
+                        Igreja Presbiteriana de Altiplano
+                    </h1>
+                    <p class="text-xs text-gray-500 font-semibold tracking-wider uppercase">
+                        Comissão Eleitoral 2026
+                    </p>
+                </div>
+            </div>
+            <div class="no-print flex gap-2">
+                <a href="edital.pdf" download class="bg-ipb-gold hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition duration-300 flex items-center gap-2 shadow text-sm font-medium">
+                    <i class="fa-solid fa-file-pdf"></i> Baixar PDF
+                </a>
+                <button onclick="window.print()" class="bg-ipb-blue hover:bg-blue-800 text-white px-4 py-2 rounded-md transition duration-300 flex items-center gap-2 shadow text-sm font-medium">
+                    <i class="fa-solid fa-print"></i> Imprimir
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow container mx-auto px-4 py-10 max-w-4xl">
+        
+        <!-- Título do Documento -->
+        <div class="text-center mb-10 border-b pb-8 border-gray-200">
+            <span class="inline-block bg-gray-100 text-gray-600 px-3 py-1 rounded text-xs font-bold uppercase mb-2 tracking-wide">
+                Documento Oficial
+            </span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 leading-tight mb-2">
+                Edital e Normas para Eleição de Oficiais
+            </h2>
+            <p class="text-gray-500 italic">Conforme Ata do Conselho nº 021 de 04/12/2025</p>
+        </div>
+
+        <!-- Seções do Edital -->
+        <div class="bg-white p-8 md:p-12 shadow-lg rounded-xl border border-gray-100 print:shadow-none print:border-none print:p-0 text-justify text-gray-700 leading-relaxed space-y-8">
+            
+            <!-- Disposições Preliminares -->
+            <section>
+                <h3 class="font-bold text-ipb-blue mb-4 text-lg border-b border-blue-100 pb-1 uppercase text-sm tracking-wider">
+                    I. Disposições Preliminares
+                </h3>
+                <p class="mb-3"><span class="font-bold text-gray-900">Artigo 1º</span> - De conformidade com a decisão do Conselho da Igreja Presbiteriana de Altiplano, fica aprovada a realização de eleição para os seguintes ofícios:</p>
+                <ul class="list-disc list-inside ml-4 mb-3 text-gray-800 font-medium">
+                    <li>Presbítero (01 vaga)</li>
+                    <li>Diáconos (04 vagas)</li>
+                </ul>
+                <p><span class="font-bold text-gray-900">Artigo 2º</span> - A Comissão Eleitoral é composta pelos Presbíteros <span class="font-semibold">Rodrigo Niskier</span> (relator) e <span class="font-semibold">Lourival Jesus</span> (secretário).</p>
+            </section>
+
+            <!-- Do Curso -->
+            <section>
+                <h3 class="font-bold text-ipb-blue mb-4 text-lg border-b border-blue-100 pb-1 uppercase text-sm tracking-wider">
+                    II. Do Curso de Formação e Habilitação
+                </h3>
+                <div class="space-y-3">
+                    <p><span class="font-bold text-gray-900">Artigo 3º</span> - Como parte do processo de eleição ocorrerá o <strong>Curso de Formação de Líderes e Oficiais</strong> nos dias 1, 8, 15, 22 e 29 de março de 2026.</p>
+                    <p><span class="font-bold text-gray-900">Artigo 4º</span> - Para ser indicado como postulante às vagas ofertadas, é <strong>obrigatória</strong> a conclusão do curso de formação com posterior aprovação pelo Conselho da Igreja.</p>
+                    <div class="pl-4 border-l-4 border-gray-200 ml-2 space-y-2 text-sm text-gray-600 italic">
+                        <p>§ 1º - Apenas a conclusão do curso não implica em sua aprovação e nem nas homologações das possíveis indicações;</p>
+                        <p>§ 2º - A aprovação no curso se dará por meio de uma entrevista feita pelo Conselho da Igreja.</p>
+                    </div>
+                    <p><span class="font-bold text-gray-900">Artigo 5º</span> - Somente os aprovados poderão ser indicados. Após a aprovação, todos os postulantes indicados já estarão homologados à eleição.</p>
+                </div>
+            </section>
+
+            <!-- Das Indicações -->
+            <section>
+                <h3 class="font-bold text-ipb-blue mb-4 text-lg border-b border-blue-100 pb-1 uppercase text-sm tracking-wider">
+                    III. Das Indicações
+                </h3>
+                <div class="space-y-4">
+                    <p><span class="font-bold text-gray-900">Artigo 6º</span> - Período de indicação de candidatos: <strong>05 a 12 de abril de 2026</strong>.</p>
+                    <p><span class="font-bold text-gray-900">Artigo 7º</span> - As indicações devem ser feitas exclusivamente por pelo menos <strong>05 (cinco) membros comungantes</strong> da IPA, que subscreverão os nomes por escrito (Ficha Anexo I), entregando-a à Comissão Eleitoral até o dia 12 de abril de 2026.</p>
+                    
+                    <div class="bg-gray-50 p-5 rounded border border-gray-200 print:bg-white print:border-none print:p-0">
+                        <p class="font-bold text-gray-900 mb-2">Artigo 8º - Requisitos para Indicação:</p>
+                        <ol class="list-[lower-alpha] list-inside space-y-2 ml-2 text-sm">
+                            <li><strong>Idade Mínima:</strong> Homem, maior de 18 anos e civilmente capaz.</li>
+                            <li><strong>Tempo de Membresia:</strong> Membro comungante há pelo menos 1 (um) ano.</li>
+                            <li><strong>Perfil:</strong> Moralmente irrepreensível, com bom testemunho.</li>
+                            <li><strong>Vocação:</strong> Demonstrar dons e, preferencialmente, experiência de serviço.</li>
+                            <li><strong>Consciência:</strong> Ciência das atribuições, funções e compromissos do ofício.</li>
+                            <li><strong>Aceitação:</strong> O postulante deve ser consultado previamente se aceita a indicação.</li>
+                            <li><strong>Observância Legal:</strong> Conformidade com o Art. 14 da CI/IPB.</li>
+                        </ol>
+                        <p class="mt-3 text-sm text-red-700 font-medium border-t border-gray-200 pt-2">
+                            <i class="fa-solid fa-triangle-exclamation mr-1"></i> Nota: Não serão homologadas indicações cujos postulantes e suas famílias não sejam dizimistas regulares.
+                        </p>
+                    </div>
+
+                    <p><span class="font-bold text-gray-900">Artigo 9º</span> - As fichas podem ser enviadas impressas ou digitalizadas para o e-mail do relator (Pb. Rodrigo): <a href="mailto:niskier.rodrigo@gmail.com" class="text-ipb-blue hover:underline font-medium">niskier.rodrigo@gmail.com</a>.</p>
+                </div>
+            </section>
+
+            <!-- Da Eleição -->
+            <section>
+                <h3 class="font-bold text-ipb-blue mb-4 text-lg border-b border-blue-100 pb-1 uppercase text-sm tracking-wider">
+                    IV. Da Eleição e Assembleia
+                </h3>
+                <div class="space-y-3">
+                    <p><span class="font-bold text-gray-900">Artigo 10</span> - Os candidatos serão apresentados à igreja no dia <strong>19 de abril de 2026</strong>.</p>
+                    <p><span class="font-bold text-gray-900">Artigo 11</span> - A Comissão Eleitoral confeccionará as cédulas (ordem alfabética) e a lista de presença.</p>
+                    
+                    <div class="bg-blue-50 border-l-4 border-ipb-blue p-4 my-4 print:bg-white print:border-l-0 print:pl-0">
+                        <p class="text-ipb-blue font-bold text-lg mb-1">Assembleia Extraordinária</p>
+                        <p class="text-gray-800"><span class="font-bold">Artigo 12</span> - Dia <strong>26 de abril de 2026</strong> (Domingo), às <strong>11h15</strong>, presencialmente após o Culto Devocional.</p>
+                    </div>
+
+                    <p><span class="font-bold text-gray-900">Artigo 13</span> - A reunião ocorrerá em primeira convocação, independente do número de presentes.</p>
+                    <p><span class="font-bold text-gray-900">Artigo 14</span> - Serão eleitos os candidatos com maioria simples dos votos válidos (metade mais um), dentro do limite de vagas.</p>
+                    <p><span class="font-bold text-gray-900">Artigo 15</span> - Cada membro poderá votar em até <strong>01 candidato ao presbiterato</strong> e <strong>04 candidatos ao diaconato</strong>. Cédulas com mais votos que o permitido serão nulas.</p>
+                    <p><span class="font-bold text-gray-900">Artigo 16</span> - Caso haja vagas remanescentes, haverá novo escrutínio apenas com os candidatos mais votados não eleitos (número de vagas + 1).</p>
+                    <p><span class="font-bold text-gray-900">Artigo 17</span> - Os casos omissos serão submetidos ao Conselho da IPA.</p>
+                </div>
+            </section>
+
+            <!-- Cronograma -->
+            <section class="break-inside-avoid">
+                <h3 class="font-bold text-ipb-blue mb-4 text-lg border-b border-blue-100 pb-1 uppercase text-sm tracking-wider">
+                    V. Cronograma do Processo (Artigo 18)
+                </h3>
+                <div class="overflow-hidden border border-gray-200 rounded-lg">
+                    <table class="min-w-full text-sm text-left">
+                        <thead class="bg-gray-100 text-gray-900 font-bold uppercase">
+                            <tr>
+                                <th class="px-4 py-3 border-b">Data</th>
+                                <th class="px-4 py-3 border-b">Evento</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="bg-white">
+                                <td class="px-4 py-3 whitespace-nowrap font-medium text-ipb-blue">Março: 01, 08, 15, 22, 29</td>
+                                <td class="px-4 py-3">Curso de Formação de Líderes e Oficiais (CFLO)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-4 py-3 whitespace-nowrap font-medium text-ipb-blue">05 a 12 de Abril</td>
+                                <td class="px-4 py-3">Período de indicação de candidatos</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <td class="px-4 py-3 whitespace-nowrap font-medium text-ipb-blue">12 de Abril</td>
+                                <td class="px-4 py-3 font-bold text-red-600">Encerramento das indicações</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-4 py-3 whitespace-nowrap font-medium text-ipb-blue">19 de Abril</td>
+                                <td class="px-4 py-3">Apresentação dos candidatos à igreja</td>
+                            </tr>
+                            <tr class="bg-blue-50 border-l-4 border-ipb-gold">
+                                <td class="px-4 py-3 whitespace-nowrap font-bold text-ipb-blue">26 de Abril (11h15)</td>
+                                <td class="px-4 py-3 font-bold">Assembleia Extraordinária (Eleição, Ordenação e Posse)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ipb-dark text-white py-8 mt-auto print:hidden">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-serif text-lg mb-2">Igreja Presbiteriana de Altiplano</p>
+            <p class="text-gray-400 text-sm">© 2026 - Comissão Eleitoral</p>
+        </div>
+    </footer>
+
+</body>
+</html>
