@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Formação de Líderes e Oficiais - IPB Altiplano</title>
+    
+    <!-- Tailwind CSS (Estilização) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonte Google: Noto Serif (Títulos) e Inter (Texto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ipb: {
+                            blue: '#004785', // Azul aproximado da IPB
+                            gold: '#C5A059', // Dourado
+                            dark: '#1a1a1a',
+                            light: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Noto Serif"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos específicos para impressão */
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: white; }
+            .shadow-lg { box-shadow: none; border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body class="bg-ipb-light text-gray-800 font-sans min-h-screen flex flex-col">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-md border-b-4 border-ipb-blue">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <!-- Logo com fallback caso a imagem não carregue -->
+                <div class="w-20 h-20 flex-shrink-0 flex items-center justify-center bg-gray-100 rounded-full overflow-hidden border-2 border-ipb-gold">
+                    <img src="logo.jpg" 
+                         alt="Logo Igreja Presbiteriana de Altiplano" 
+                         class="w-full h-full object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/200x200/004785/FFFFFF?text=IPA'; this.alt='Logo Placeholder';">
+                </div>
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-serif font-bold text-ipb-blue uppercase tracking-wide">
+                        Igreja Presbiteriana de Altiplano
+                    </h1>
+                    <p class="text-sm text-gray-500 font-semibold tracking-wider uppercase mt-1">
+                        Conselho da Igreja
+                    </p>
+                </div>
+            </div>
+            <div class="no-print">
+                <button onclick="window.print()" class="bg-ipb-blue hover:bg-blue-800 text-white px-6 py-2 rounded-md transition duration-300 flex items-center gap-2 shadow">
+                    <i class="fa-solid fa-print"></i> Imprimir Programa
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow container mx-auto px-4 py-10">
+        
+        <!-- Título do Evento -->
+        <div class="text-center mb-12 max-w-4xl mx-auto">
+            <span class="inline-block bg-ipb-gold/20 text-ipb-blue px-4 py-1 rounded-full text-sm font-bold uppercase mb-4 tracking-wide border border-ipb-gold/50">
+                Ata do Conselho
+            </span>
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
+                Curso de Formação de Líderes e Oficiais
+            </h2>
+            <div class="inline-flex items-center justify-center gap-3 bg-white px-6 py-3 rounded-lg shadow-sm border border-gray-200">
+                <i class="fa-regular fa-calendar-check text-ipb-gold text-2xl"></i>
+                <div class="text-left">
+                    <p class="text-xs text-gray-500 uppercase font-bold">Datas (Sábados)</p>
+                    <p class="text-lg font-bold text-ipb-blue">01, 08, 15, 22 e 29 de Março de 2026</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards de Conteúdo Programático -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+            <!-- Parte I -->
+            <div class="bg-white rounded-xl shadow-lg border-t-4 border-green-600 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="bg-green-50 p-6 border-b border-green-100">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-green-700 font-bold text-sm uppercase tracking-wider">Parte I</span>
+                        <i class="fa-solid fa-seedling text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-gray-900 leading-tight">
+                        Discipulado Básico e Nivelador
+                    </h3>
+                    <p class="text-green-800 text-sm mt-1 italic">Treinar, compartilhando verdades profundas</p>
+                </div>
+                <div class="p-6 flex-grow">
+                    <h4 class="text-xs font-bold text-gray-400 uppercase mb-2">Propósito</h4>
+                    <p class="text-gray-700 leading-relaxed text-justify">
+                        Introduzir e desenvolver o conceito bíblico de discipulado e a sua relevância prática na vida pessoal e eclesiástica.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Parte II -->
+            <div class="bg-white rounded-xl shadow-lg border-t-4 border-ipb-gold overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="bg-yellow-50 p-6 border-b border-yellow-100">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-yellow-700 font-bold text-sm uppercase tracking-wider">Parte II</span>
+                        <i class="fa-solid fa-hands-holding-circle text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-gray-900 leading-tight">
+                        Discipulado Intermediário e de Crescimento
+                    </h3>
+                    <p class="text-yellow-800 text-sm mt-1 italic">Suportar: Mentorear (Capacitação de Líderes)</p>
+                </div>
+                <div class="p-6 flex-grow">
+                    <h4 class="text-xs font-bold text-gray-400 uppercase mb-2">Propósito</h4>
+                    <p class="text-gray-700 leading-relaxed text-justify">
+                        Capacitar e aprimorar a liderança da igreja, alinhada aos princípios bíblicos, auxiliando no desenvolvimento de habilidades e dons para o serviço eclesiástico.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Parte III -->
+            <div class="bg-white rounded-xl shadow-lg border-t-4 border-ipb-blue overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div class="bg-blue-50 p-6 border-b border-blue-100">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-ipb-blue font-bold text-sm uppercase tracking-wider">Parte III</span>
+                        <i class="fa-solid fa-book-bible text-ipb-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-gray-900 leading-tight">
+                        Discipulado Avançado
+                    </h3>
+                    <p class="text-blue-800 text-sm mt-1 italic">Mentoria Específica</p>
+                </div>
+                <div class="p-6 flex-grow">
+                    <h4 class="text-xs font-bold text-gray-400 uppercase mb-2">Propósito</h4>
+                    <p class="text-gray-700 leading-relaxed text-justify">
+                        Capacitar homens com vocação clara para os ofícios de <span class="font-semibold text-ipb-blue">Diácono, Presbítero e Ministro da Palavra e dos Sacramentos</span>, garantindo excelência na formação de lideranças para a igreja.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Nota de Rodapé do Documento -->
+        <div class="max-w-4xl mx-auto mt-12 pt-8 border-t border-gray-200 text-center">
+            <p class="text-gray-500 italic text-sm">
+                "Procura apresentar-te a Deus aprovado, como obreiro que não tem de que se envergonhar, que maneja bem a palavra da verdade." — 2 Timóteo 2:15
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ipb-dark text-white py-8 mt-auto print:hidden">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-serif text-lg mb-2">Igreja Presbiteriana de Altiplano</p>
+            <p class="text-gray-400 text-sm">© 2026 - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
